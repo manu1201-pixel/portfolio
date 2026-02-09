@@ -1,0 +1,366 @@
+/* --- RESET & GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a; /* Deep Black */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION (Glass Effect) --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px); /* Frosted Glass */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #00d2ff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #151515 0%, #0a0a0a 100%);
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 10px 0;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5); /* Neon Cyan to Blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.hero .sub-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- BUTTONS (The Flexbox Fix) --- */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Primary "Glow" Button */
+.btn-primary {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.8);
+}
+
+/* Secondary "Outline" Buttons */
+.btn-secondary {
+    padding: 12px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-section {
+    padding: 100px 50px;
+    background-color: #0a0a0a;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Holographic Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #00d2ff;
+    box-shadow: 0 10px 40px rgba(0, 210, 255, 0.1);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #00d2ff;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    font-size: 0.75rem;
+    background: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-link:hover {
+    color: #00d2ff;
+    gap: 10px;
+}
+
+/* SKILLS SECTION */
+.skills-section {
+    padding: 50px 50px 100px 50px;
+    background-color: #0a0a0a;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split screen 50/50 */
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-column h3 i {
+    color: #00d2ff; /* Icon color */
+}
+
+/* 1. The Glowing Tech Chips */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: #00d2ff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3); /* Neon Glow */
+    transform: translateY(-2px);
+}
+
+/* Special highlight for n8n/Automation */
+.highlight-tag {
+    border-color: #00d2ff;
+    color: #fff;
+}
+
+/* 2. The Language Progress Bars */
+.lang-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang-name {
+    width: 80px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5); /* The Blue Gradient */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5); /* Glowing Bar */
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Stack on top of each other */
+        gap: 40px;
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 80px 20px;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin: 30px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #00d2ff;
+    transform: scale(1.1);
+}
+
+.copyright {
+    color: #444;
+    font-size: 0.8rem;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    nav { padding: 20px; }
+    .btn-group { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
